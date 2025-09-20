@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Aballo Djounédou</title>
+  <style>
+    /* ---- Reset ---- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    /* ---- Header ---- */
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* ---- Navbar ---- */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #2563eb;
+    }
+
+    /* ---- Sections ---- */
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeUp 1s ease;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #1e3a8a;
+    }
+
+    /* ---- Projects ---- */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+      color: #2563eb;
+    }
+
+    /* ---- Contact ---- */
+    #contact p {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+
+    #contact a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* ---- Animations ---- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- ---- HEADER ---- -->
+  <header>
+    <h1>Aballo Djounédou</h1>
+    <p>Étudiant en maintenance industrielle | Passionné de mécatronique</p>
+  </header>
+
+  <!-- ---- NAV ---- -->
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#projects">Projets</a>
+    <a href="#experience">Expériences</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ---- ABOUT ---- -->
+  <section id="about">
+    <h2>À propos de moi</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+      Je suis étudiant en maintenance industrielle, passionné par la mécatronique, 
+      l’automatisation et la stratégie industrielle. 
+      Mon objectif est de contribuer au développement industriel par des solutions innovantes et durables.
+    </p>
+  </section>
+
+  <!-- ---- PROJECTS ---- -->
+  <section id="projects">
+    <h2>Mes Projets</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>🚗 Véhicule Arduino</h3>
+        <p>Conception d’un véhicule intelligent utilisant Arduino, capteurs ultrason et Python pour la visualisation des données.</p>
+      </div>
+      <div class="project">
+        <h3>⚡ Système de pompage</h3>
+        <p>Étude et proposition d’amélioration du système de pompage de la station d’épuration STP (GDIZ). Réalisé avec AutoCAD et automatisation.</p>
+      </div>
+      <div class="project">
+        <h3>🏭 Optimisation énergétique</h3>
+        <p>Stage à SIPI Bénin SA : amélioration de la performance énergétique et fiabilité d’un sous-poste de distribution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- EXPERIENCE ---- -->
+  <section id="experience">
+    <h2>Expériences</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+      <strong>SIPI Bénin SA</strong> – Stage en maintenance industrielle (avec Mafous AKPAKI).<br>
+      Étude, diagnostic et proposition de solutions pour améliorer la performance des systèmes électriques et mécaniques.
+    </p>
+  </section>
+
+  <!-- ---- CONTACT ---- -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email : <a href="mailto:tonmail@example.com">tonmail@example.com</a></p>
+    <p>🔗 LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">Mon profil</a></p>
+    <p>💻 GitHub : <a href="https://github.com/tonprofil" target="_blank">Mes projets</a></p>
+  </section>
+
+  <!-- ---- FOOTER ---- -->
+  <footer>
+    <p>&copy; 2025 - Portfolio de Aballo Djounédou</p>
+  </footer>
+</body>
+</html>
