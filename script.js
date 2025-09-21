@@ -1,0 +1,29 @@
+function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => {
+        if(sec.id === id) {
+            sec.classList.add('active');
+            const cards = sec.querySelectorAll('.card');
+            cards.forEach((card, i) => {
+                card.classList.remove('show');
+                setTimeout(()=>{ card.classList.add('show'); }, i*150);
+            });
+            sec.scrollIntoView({behavior:"smooth"});
+        } else {
+            sec.classList.remove('active');
+        }
+    });
+}
+
+window.addEventListener('load', () => {
+    const aboutCards = document.querySelectorAll('#about .card');
+    aboutCards.forEach((card, i)=>{
+        setTimeout(()=>{ card.classList.add('show'); }, i*150);
+    });
+});
+
+function submitForm(event) {
+    event.preventDefault();
+    alert("Merci ! Votre message a été envoyé (simulation).");
+    return false;
+}

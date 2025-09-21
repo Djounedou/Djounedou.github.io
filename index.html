@@ -1,204 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Aballo Djounédou</title>
-  <style>
-    /* ---- Reset ---- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f8fafc;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    /* ---- Header ---- */
-    header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
-      animation: fadeIn 1.5s ease;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    /* ---- Navbar ---- */
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #111827;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      padding: 1rem 1.5rem;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      background: #2563eb;
-    }
-
-    /* ---- Sections ---- */
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeUp 1s ease;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: #1e3a8a;
-    }
-
-    /* ---- Projects ---- */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-
-    .project h3 {
-      margin-bottom: 0.5rem;
-      color: #2563eb;
-    }
-
-    /* ---- Contact ---- */
-    #contact p {
-      text-align: center;
-      margin: 0.5rem 0;
-    }
-
-    #contact a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-
-    #contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* ---- Footer ---- */
-    footer {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    /* ---- Animations ---- */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ABALLO Djounédou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ---- HEADER ---- -->
-  <header>
-    <h1>Aballo Djounédou</h1>
-    <p>Étudiant en maintenance industrielle | Passionné de mécatronique</p>
-  </header>
 
-  <!-- ---- NAV ---- -->
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#projects">Projets</a>
-    <a href="#experience">Expériences</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header id="main-header">
+    <h1>ABALLO Djounédou</h1>
+    <p>Technicien en Maintenance Industrielle</p>
+    <nav>
+        <a onclick="showSection('about')">Profil</a>
+        <a onclick="showSection('skills')">Compétences</a>
+        <a onclick="showSection('experience')">Expériences</a>
+        <a onclick="showSection('education')">Formation</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+</header>
 
-  <!-- ---- ABOUT ---- -->
-  <section id="about">
+<section id="about" class="active">
     <h2>À propos de moi</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">
-      Je suis étudiant en maintenance industrielle, passionné par la mécatronique, 
-      l’automatisation et la stratégie industrielle. 
-      Mon objectif est de contribuer au développement industriel par des solutions innovantes et durables.
-    </p>
-  </section>
+    <img src="https://i.pravatar.cc/150?img=3" alt="Photo de ABALLO Djounédou">
+    <p>Technicien en maintenance des systèmes industriels et électrotechnicien, avec expériences concrètes dans le montage, l’entretien et le dépannage des installations industrielles. Rigoureux, dynamique et orienté résultats, bonne maîtrise des enjeux de la fiabilité des équipements et de la sécurité au travail.</p>
+</section>
 
-  <!-- ---- PROJECTS ---- -->
-  <section id="projects">
-    <h2>Mes Projets</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>🚗 Véhicule Arduino</h3>
-        <p>Conception d’un véhicule intelligent utilisant Arduino, capteurs ultrason et Python pour la visualisation des données.</p>
-      </div>
-      <div class="project">
-        <h3>⚡ Système de pompage</h3>
-        <p>Étude et proposition d’amélioration du système de pompage de la station d’épuration STP (GDIZ). Réalisé avec AutoCAD et automatisation.</p>
-      </div>
-      <div class="project">
-        <h3>🏭 Optimisation énergétique</h3>
-        <p>Stage à SIPI Bénin SA : amélioration de la performance énergétique et fiabilité d’un sous-poste de distribution.</p>
-      </div>
+<section id="skills">
+    <h2>Compétences</h2>
+    <div class="skills">
+        <div class="card"><p>Lecture et interprétation de plans et schémas</p></div>
+        <div class="card"><p>Pneumatique & automatisme industriel</p></div>
+        <div class="card"><p>Montage caméras & groupes électrogènes</p></div>
+        <div class="card"><p>Dimensionnement systèmes photovoltaïques</p></div>
+        <div class="card"><p>MS Office, prise d’initiative, discipline</p></div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python Logo">
+            <p>Python</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="AutoCAD Logo">
+            <p>AutoCAD</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="SolidWorks Logo">
+            <p>SolidWorks</p>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/TIA_Portal_Logo.png" alt="TIA Portal Logo" style="width:50px;">
+            <p>TIA Portal</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- ---- EXPERIENCE ---- -->
-  <section id="experience">
-    <h2>Expériences</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">
-      <strong>SIPI Bénin SA</strong> – Stage en maintenance industrielle (avec Mafous AKPAKI).<br>
-      Étude, diagnostic et proposition de solutions pour améliorer la performance des systèmes électriques et mécaniques.
-    </p>
-  </section>
+<section id="experience">
+    <h2>Expériences Professionnelles / Stages</h2>
+    <div class="experiences">
+        <div class="card">
+            <h3>SIPI-Bénin (2024-2025)</h3>
+            <p>Stage professionnel – Contrôle et surveillance électriques, boîtes de jonction, maintenance préventive et corrective.</p>
+        </div>
+        <div class="card">
+            <h3>GVS SA (2023)</h3>
+            <p>Stage immersion – Pilotage et suivi d’un compresseur et d’une chaudière, interventions sur pannes électriques.</p>
+        </div>
+        <div class="card">
+            <h3>CFP El, Parakou (2021-2022 / 2020)</h3>
+            <p>Formation en électricité et perfectionnement technique.</p>
+        </div>
+    </div>
+</section>
 
-  <!-- ---- CONTACT ---- -->
-  <section id="contact">
+<section id="education">
+    <h2>Parcours Académique</h2>
+    <div class="education">
+        <div class="card"><p>2025 – Licence Pro Maintenance Industrielle, INSTI-Lokossa</p></div>
+        <div class="card"><p>2022 – Baccalauréat Electrotechnique, Lycée Technique Professionnel-Ina</p></div>
+        <div class="card"><p>2022 – Diplôme de Technicien Electrotechnique, Lycée Technique Professionnel-Ina</p></div>
+        <div class="card"><p>2021 – CAP Electricité, Lycée Technique Professionnel-Ina</p></div>
+    </div>
+</section>
+
+<section id="contact">
     <h2>Contact</h2>
-    <p>📧 Email : <a href="mailto:tonmail@example.com">tonmail@example.com</a></p>
-    <p>🔗 LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">Mon profil</a></p>
-    <p>💻 GitHub : <a href="https://github.com/tonprofil" target="_blank">Mes projets</a></p>
-  </section>
+    <form onsubmit="return submitForm(event)">
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">Email: aballodjounedou@gmail.com | Téléphone: 01 96 09 25 95 / 01 43 87 69 96 | Abomey-Calavi</p>
+</section>
 
-  <!-- ---- FOOTER ---- -->
-  <footer>
-    <p>&copy; 2025 - Portfolio de Aballo Djounédou</p>
-  </footer>
+<footer>
+    <p>© 2025 ABALLO Djounédou | Je certifie conformes et exactes toutes les informations énumérées ci-dessus.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
