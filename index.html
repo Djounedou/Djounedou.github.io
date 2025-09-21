@@ -1,97 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - ABALLO Djounédou</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - ABALLO Djounédou</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header id="main-header">
-    <h1>ABALLO Djounédou</h1>
-    <p>Technicien en Maintenance Industrielle</p>
-    <nav>
-        <a onclick="showSection('about')">Profil</a>
-        <a onclick="showSection('skills')">Compétences</a>
-        <a onclick="showSection('experience')">Expériences</a>
-        <a onclick="showSection('education')">Formation</a>
-        <a onclick="showSection('contact')">Contact</a>
-    </nav>
-</header>
+<div class="container">
+    <aside class="sidebar">
+        <img src="https://i.pravatar.cc/150?img=3" alt="Photo de ABALLO Djounédou" class="profile-pic">
+        <h2>ABALLO Djounédou</h2>
+        <p>Technicien en Maintenance Industrielle</p>
+        <nav>
+            <ul>
+                <li onclick="showSection('about')">Profil</li>
+                <li onclick="showSection('skills')">Compétences</li>
+                <li onclick="showSection('experience')">Expériences</li>
+                <li onclick="showSection('education')">Formation</li>
+                <li onclick="showSection('contact')">Contact</li>
+            </ul>
+        </nav>
+    </aside>
 
-<section id="about" class="active">
-    <h2>À propos de moi</h2>
-    <img src="https://i.pravatar.cc/150?img=3" alt="Photo de ABALLO Djounédou">
-    <p>Technicien en maintenance des systèmes industriels et électrotechnicien, avec expériences concrètes dans le montage, l’entretien et le dépannage des installations industrielles. Rigoureux, dynamique et orienté résultats, bonne maîtrise des enjeux de la fiabilité des équipements et de la sécurité au travail.</p>
-</section>
+    <main class="main-content">
+        <section id="about" class="active">
+            <h2>À propos de moi</h2>
+            <p>Technicien en maintenance des systèmes industriels et électrotechnicien, avec expériences concrètes dans le montage, l’entretien et le dépannage des installations industrielles. Rigoureux, dynamique et orienté résultats, bonne maîtrise des enjeux de la fiabilité des équipements et de la sécurité au travail.</p>
+        </section>
 
-<section id="skills">
-    <h2>Compétences</h2>
-    <div class="skills">
-        <div class="card"><p>Lecture et interprétation de plans et schémas</p></div>
-        <div class="card"><p>Pneumatique & automatisme industriel</p></div>
-        <div class="card"><p>Montage caméras & groupes électrogènes</p></div>
-        <div class="card"><p>Dimensionnement systèmes photovoltaïques</p></div>
-        <div class="card"><p>MS Office, prise d’initiative, discipline</p></div>
-        <div class="card">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python Logo">
-            <p>Python</p>
-        </div>
-        <div class="card">
-            <img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="AutoCAD Logo">
-            <p>AutoCAD</p>
-        </div>
-        <div class="card">
-            <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="SolidWorks Logo">
-            <p>SolidWorks</p>
-        </div>
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/TIA_Portal_Logo.png" alt="TIA Portal Logo" style="width:50px;">
-            <p>TIA Portal</p>
-        </div>
-    </div>
-</section>
+        <section id="skills">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="card"><p>Lecture et interprétation de plans et schémas</p></div>
+                <div class="card"><p>Pneumatique & automatisme industriel</p></div>
+                <div class="card"><p>Montage caméras & groupes électrogènes</p></div>
+                <div class="card"><p>Dimensionnement systèmes photovoltaïques</p></div>
+                <div class="card"><p>MS Office, prise d’initiative, discipline</p></div>
+                <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Python Logo"><p>Python</p></div>
+                <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="AutoCAD Logo"><p>AutoCAD</p></div>
+                <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="SolidWorks Logo"><p>SolidWorks</p></div>
+                <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/TIA_Portal_Logo.png" alt="TIA Portal Logo" style="width:50px;"><p>TIA Portal</p></div>
+            </div>
+        </section>
 
-<section id="experience">
-    <h2>Expériences Professionnelles / Stages</h2>
-    <div class="experiences">
-        <div class="card">
-            <h3>SIPI-Bénin (2024-2025)</h3>
-            <p>Stage professionnel – Contrôle et surveillance électriques, boîtes de jonction, maintenance préventive et corrective.</p>
-        </div>
-        <div class="card">
-            <h3>GVS SA (2023)</h3>
-            <p>Stage immersion – Pilotage et suivi d’un compresseur et d’une chaudière, interventions sur pannes électriques.</p>
-        </div>
-        <div class="card">
-            <h3>CFP El, Parakou (2021-2022 / 2020)</h3>
-            <p>Formation en électricité et perfectionnement technique.</p>
-        </div>
-    </div>
-</section>
+        <section id="experience">
+            <h2>Expériences</h2>
+            <div class="timeline">
+                <div class="card">
+                    <h3>SIPI-Bénin (2024-2025)</h3>
+                    <p>Stage professionnel – Contrôle et surveillance électriques, boîtes de jonction, maintenance préventive et corrective.</p>
+                </div>
+                <div class="card">
+                    <h3>GVS SA (2023)</h3>
+                    <p>Stage immersion – Pilotage et suivi d’un compresseur et d’une chaudière, interventions sur pannes électriques.</p>
+                </div>
+                <div class="card">
+                    <h3>CFP El, Parakou (2021-2022 / 2020)</h3>
+                    <p>Formation en électricité et perfectionnement technique.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="education">
-    <h2>Parcours Académique</h2>
-    <div class="education">
-        <div class="card"><p>2025 – Licence Pro Maintenance Industrielle, INSTI-Lokossa</p></div>
-        <div class="card"><p>2022 – Baccalauréat Electrotechnique, Lycée Technique Professionnel-Ina</p></div>
-        <div class="card"><p>2022 – Diplôme de Technicien Electrotechnique, Lycée Technique Professionnel-Ina</p></div>
-        <div class="card"><p>2021 – CAP Electricité, Lycée Technique Professionnel-Ina</p></div>
-    </div>
-</section>
+        <section id="education">
+            <h2>Formation</h2>
+            <div class="timeline">
+                <div class="card"><p>2025 – Licence Pro Maintenance Industrielle, INSTI-Lokossa</p></div>
+                <div class="card"><p>2022 – Baccalauréat Electrotechnique, Lycée Technique Professionnel-Ina</p></div>
+                <div class="card"><p>2022 – Diplôme de Technicien Electrotechnique, Lycée Technique Professionnel-Ina</p></div>
+                <div class="card"><p>2021 – CAP Electricité, Lycée Technique Professionnel-Ina</p></div>
+            </div>
+        </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <form onsubmit="return submitForm(event)">
-        <input type="text" placeholder="Nom" required>
-        <input type="email" placeholder="Email" required>
-        <textarea rows="5" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
-    <p style="text-align:center; margin-top:20px;">Email: aballodjounedou@gmail.com | Téléphone: 01 96 09 25 95 / 01 43 87 69 96 | Abomey-Calavi</p>
-</section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form onsubmit="return submitForm(event)">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <p>Email: aballodjounedou@gmail.com | Téléphone: 01 96 09 25 95 / 01 43 87 69 96 | Abomey-Calavi</p>
+        </section>
+    </main>
+</div>
 
 <footer>
     <p>© 2025 ABALLO Djounédou | Je certifie conformes et exactes toutes les informations énumérées ci-dessus.</p>
